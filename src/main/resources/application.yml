@@ -1,0 +1,9 @@
+server:
+  port: 18000
+#eureka:
+#  client:
+ #   service-url: http://localhost:10001/eureka/
+#spring:
+  application:
+   name: my-mpi
+zuul:
