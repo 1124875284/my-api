@@ -9,13 +9,17 @@ import java.io.Serializable;
  * @data 2018/9/1 14:47
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Person implements Serializable {
 
 
+    private static final long serialVersionUID = -3491286488716601916L;
     private Long id;
 
     private String name;
 
     private Long age;
+
 
 }

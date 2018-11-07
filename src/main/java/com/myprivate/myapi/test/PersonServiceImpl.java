@@ -1,12 +1,10 @@
 package com.myprivate.myapi.test;
 
 
-import org.apache.commons.lang.StringUtils;
+import io.netty.util.concurrent.Future;
+import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.*;
 
 /**
  * @author 黄志强
@@ -17,7 +15,7 @@ public class PersonServiceImpl {
 
 
 
-    public static void main(String[] args) {
+    public static void demo1(String[] args) {
 
         String[] str={"a123","b123","c123","d123","e123"};
         List<String> list=Arrays.asList(str);
@@ -34,8 +32,28 @@ public class PersonServiceImpl {
         };
 
         Runnable race2=()-> System.out.println("runnable = " + runnable);
+    }
+    @Test
+    public void demo2(){
+        Map<String,String> map=new HashMap<>(1);
+        map.put(null,"123");
+        System.out.println("map = " + map.size());
+        map.put(null,null);
+        System.out.println("map = " + map);
 
 
+        Hashtable<Object, Object> hashtable = new Hashtable<>();
+        hashtable.put("123","546");
+
+        HashSet set=new HashSet();
+
+    }
+    public void demo3(){
+        Map<String,String> map=new HashMap<>(1);
+        map.put(null,"123");
+        Map<String, String> map1 = Collections.synchronizedMap(new HashMap<>(2));
+
+        List<Future> list=new ArrayList<>();
     }
 
 }

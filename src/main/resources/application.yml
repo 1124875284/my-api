@@ -6,4 +6,5 @@ server:
 #spring:
   application:
    name: my-mpi
-zuul:
+logging:
+  file: E:/mylog/log.log

@@ -6,6 +6,10 @@
     <groupId>com.myprivate</groupId>
     <artifactId>my-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>my-remote</module>
+        <module>my-remote</module>
+    </modules>
 
     <packaging>pom</packaging>
 
@@ -104,8 +108,6 @@
         </dependency>
 
 
-
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
@@ -143,6 +145,38 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>test</id>
+            <properties>
+                <env.name>test</env.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>gray</id>
+            <properties>
+                <env.name>gray</env.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <env.name>prod</env.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>test1</id>
+            <properties>
+                <env.name>test1</env.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>test2</id>
+            <properties>
+                <env.name>test2</env.name>
+            </properties>
+        </profile>
+    </profiles>
 
 
 </project>
